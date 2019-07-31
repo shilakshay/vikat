@@ -1,0 +1,29 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    font-family: 'Montserrat'
+}
+
+.heading{
+    h1{
+        text-align: center;
+    }
+}
+
+.message{
+    line-height: 1.15em;
+    margin: 1em;
+    text-indent: 5em;
+    p{
+        margin: 0;
+    }
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background: black;
+    color: white;
+}

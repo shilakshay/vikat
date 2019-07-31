@@ -1,0 +1,79 @@
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  max-width: 100%;
+}
+
+.form-home {
+  width: 80%;
+  margin: 0 4em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  align-items: baseline;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav .company-name p {
+  font-size: 1.5em;
+}
+
+nav .dropdown-toggle {
+  cursor: pointer;
+}
+
+.sidebar-color {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.sidebar {
+  height: 100%;
+  padding: 3em 2em;
+}
+
+.sidebar .link-group p {
+  text-align: left;
+  color: white;
+  font-weight: 600;
+}
+
+.sidebar .link-group .links {
+  margin: 1em 0.5em;
+}
+
+.sidebar .link-group .links a {
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+.table-container {
+  min-height: 70vh;
+}
+
+.heading {
+  margin: 3em 0 0 0;
+}
+
+.product-table-image {
+  height: 300px !important;
+  width: 300px !important;
+  max-height: 300px;
+  max-width: 300px;
+}
+
+.row {
+  min-height: 100vh !important;
+}
+

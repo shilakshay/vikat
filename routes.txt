@@ -1,0 +1,39 @@
++--------+----------------------------------------+------------------------------------------+-----------+-------------------------------------------------------------------+---------------+
+| Domain | Method                                 | URI                                      | Name      | Action                                                            | Middleware    |
++--------+----------------------------------------+------------------------------------------+-----------+-------------------------------------------------------------------+---------------+
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | admin/account/verify/{token}             |           | App\Http\Controllers\AdminController@verifyPasswordResetToken     | web           |
+|        | POST                                   | admin/action/add/admin                   |           | App\Http\Controllers\AdminController@createAdmin                  | web           |
+|        | POST                                   | admin/action/login                       |           | App\Http\Controllers\AdminController@adminLogin                   | web           |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | admin/action/photoimage/delete/{id}      |           | App\Http\Controllers\ProductImagesController@destroy              | web,adminauth |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | admin/action/product/create              |           | App\Http\Controllers\ProductController@store                      | web,adminauth |
+|        | GET|HEAD                               | admin/action/product/delete/{id}         |           | App\Http\Controllers\ProductController@destroy                    | web,adminauth |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | admin/action/product/edit/{id}           |           | App\Http\Controllers\ProductController@edit                       | web,adminauth |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | admin/action/product/update/{id}         |           | App\Http\Controllers\ProductController@update                     | web,adminauth |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | admin/action/slider/delete/{id}          |           | App\Http\Controllers\SliderController@destroy                     | web,adminauth |
+|        | GET|HEAD                               | admin/dashboard                          | dashboard | App\Http\Controllers\AdminController@showDashboard                | web,adminauth |
+|        | GET|HEAD                               | admin/dashboard/product                  |           | App\Http\Controllers\ProductController@create                     | web,adminauth |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | admin/dashboard/product/view             |           | App\Http\Controllers\ProductController@index                      | web,adminauth |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | admin/dashboard/productimage             |           | App\Http\Controllers\ProductImagesController@index                | web,adminauth |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | admin/dashboard/productimage/delete/{id} |           | App\Http\Controllers\ProductImagesController@destroy              | web,adminauth |
+|        | POST                                   | admin/dashboard/productimage/save        |           | App\Http\Controllers\ProductImagesController@store                | web,adminauth |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | admin/dashboard/productimage/upload/{id} |           | App\Http\Controllers\ProductImagesController@create               | web,adminauth |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | admin/dashboard/slider                   |           | App\Http\Controllers\SliderController@create                      | web,adminauth |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | admin/dashboard/slider/edit              |           | App\Http\Controllers\SliderController@edit                        | web,adminauth |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | admin/dashboard/slider/store             |           | App\Http\Controllers\SliderController@store                       | web,adminauth |
+|        | GET|HEAD                               | admin/forgotpassword                     |           | App\Http\Controllers\AdminController@forgotPasswordForm           | web           |
+|        | GET|HEAD                               | admin/home                               | home      | Closure                                                           | web           |
+|        | GET|HEAD                               | admin/login                              | login     | App\Http\Controllers\AdminController@showLoginForm                | web           |
+|        | GET|HEAD                               | admin/logout                             | logout    | App\Http\Controllers\AdminController@logout                       | web           |
+|        | GET|HEAD                               | admin/register                           |           | App\Http\Controllers\AdminController@showRegisterForm             | web           |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | admin/resetpassword/action               |           | App\Http\Controllers\AdminController@forgotPasswordMailSend       | web           |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | admin/resetpassword/final_action         |           | App\Http\Controllers\AdminController@verifyPasswordGetNewPassword | web           |
+|        | GET|HEAD                               | api/user                                 |           | Closure                                                           | api,auth:api  |
++--------+----------------------------------------+------------------------------------------+-----------+-------------------------------------------------------------------+---------------+
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=03dfc60c8f1340
+MAIL_PASSWORD=f2a47916f9dcf7
+MAIL_FROM_ADDRESS=from@example.com
+MAIL_FROM_NAME=Vikat
